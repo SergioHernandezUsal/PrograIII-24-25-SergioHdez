@@ -1,0 +1,54 @@
+package modell;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.coti.tools.Rutas;
+
+
+
+public class FacturaModel {
+    private List<Factura> facturas;
+    private Path rutaArchivo=Rutas.pathToFileOnDesktop("facturas.tsv");
+
+    public FacturaModel(){
+        this.facturas = new ArrayList<>();
+
+    }
+
+    public int cargarFacturasDesdeArchivo(){
+        // leer todas las lineas del fichero
+        List<String> lineas = null;
+        System.out.println("Cargar facturas desde fichero");
+        try {
+            lineas = Files.readAllLines(rutaArchivo, StandardCharsets.UTF_8);
+            int lineasCorrectas = 0;
+            for(String linea: lineas){
+                Factura factura = Factura.getFacturaFromString(linea, "\t");
+                if (factura != null){
+                    facturas.add(factura);
+                    lineasCorrectas++;
+                }
+                
+
+            }
+            return lineasCorrectas;
+        } catch (IOException e) {
+            return -1;
+            // TODO: handle exception
+        }
+                
+
+    }
+
+    public List<Factura> getFacturas() {
+            return facturas;
+        
+        
+    }
+
+}
