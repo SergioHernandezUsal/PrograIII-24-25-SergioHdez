@@ -23,7 +23,7 @@ public class App {
         Persona masAlto = personas[0];
         Persona masPesado = personas[0];
 
-        for (int i = 1; i < personas.length; i++) {
+        for (int i = ; i < personas.length; i++) {
          
             if (personas[i].getAltura() > masAlto.getAltura()) {
                 masAlto = personas[i];
@@ -32,6 +32,9 @@ public class App {
             if (personas[i].getPeso() > masPesado.getPeso()) {
                 masPesado = personas[i];
             }
+
+            double imc= personas[i].calcularIMC();
+            System.out.println("El IMC de la persona" +i+ "es %2.f" +imc);
         }
 
         

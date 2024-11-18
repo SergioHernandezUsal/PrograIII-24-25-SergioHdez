@@ -1,6 +1,16 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "/Users/alumno/Desktop/biblioteca11.jar"
+        "/Users/alumno/Desktop/biblioteca11.jar",
+        "c:\\Users\\SERGI\\Downloads\\biblioteca11.jar"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "SEMANA08/EJE1/src",
+        "SEMANA08/EJ2/src",
+        "SEMANA07/calculadoraMVC/src",
+        "SEMANA03/ej1/src",
+        "SEMANA02/CalcularEdad/src",
+        "SEMANA03"
     ]
 }
