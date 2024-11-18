@@ -37,7 +37,9 @@ public class Persona {
     public double calcularIMC(){
         if (peso <= 0 || altura <= 0) {
             System.err.println("Error: El peso y la altura deben ser mayores que cero para calcular el IMC.");
-            return peso/altura*altura;}
+            return 0;
+        }
+        return peso/altura*altura;
                     
     }
 }
