@@ -12,5 +12,6 @@
         "SEMANA03/ej1/src",
         "SEMANA02/CalcularEdad/src",
         "SEMANA03"
-    ]
+    ],
+    "java.configuration.detectJdksAtStart": true
 }
