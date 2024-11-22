@@ -6,7 +6,7 @@ public class App {
         
         CalculadoraModel model = new CalculadoraModel();
         CalculadoraView view = new CalculadoraView();
-        ControllerCalculadora controller = new ControllerCalculadora();
+        CalculadoraController controller = new CalculadoraController(model,view);
 
         controller.run();
 

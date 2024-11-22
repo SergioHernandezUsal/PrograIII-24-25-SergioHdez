@@ -51,4 +51,27 @@ public class FacturaModel {
         
     }
 
+    public List<String> getclientesmin(double valorFacturaMin){
+        List<String> clientes=new ArrayList<>();
+        for (Factura factura: facturas){
+            if(factura.valorFactura()>valorFacturaMin){
+                clientes.add(factura.getNombreCliente());
+            }
+        }
+        return clientes;
+    
+    }
+
+    public ArrayList<String> listadoFacturas(){
+        ArrayList<String> listado=new ArrayList<>();
+        for (Factura factura: facturas){
+            listado.add(factura.getFacturasAsDelimitedString("\t"));
+
+        }
+        return listado;
+        
+
+    }
+
+   
 }

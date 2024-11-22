@@ -10,8 +10,9 @@
         "SEMANA08/EJ2/src",
         "SEMANA07/calculadoraMVC/src",
         "SEMANA03/ej1/src",
+        "SEMANA03",
         "SEMANA02/CalcularEdad/src",
-        "SEMANA03"
+        "SEMANA06/EJ1/src"
     ],
     "java.configuration.detectJdksAtStart": true
 }

@@ -1,6 +1,8 @@
-import java.util.Scanner;
-import datos.Persona;
 
+
+    import java.util.Scanner;
+    import datos.Persona;
+    
 
     public class App {
         public static void main(String[] args) throws Exception {

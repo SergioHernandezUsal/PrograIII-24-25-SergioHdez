@@ -166,6 +166,11 @@ public class Factura {
     public void setIva(double iva) {
         this.iva = iva;
     }
+
+    public double valorFactura(){
+        return importe*(1-descuento)*(1+iva);
+    }
+
 }
 
     

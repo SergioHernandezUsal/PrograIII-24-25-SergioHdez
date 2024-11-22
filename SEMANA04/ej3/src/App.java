@@ -19,7 +19,7 @@ public class App {
         boolean continuar = true;
 
         while (continuar) {
-            System.out.println("\nAtendiendo al Cliente #" + numeroCliente);
+            System.out.println("\nAtendiendo al Cliente nº" + numeroCliente);
             double totalFactura = 0;
 
            

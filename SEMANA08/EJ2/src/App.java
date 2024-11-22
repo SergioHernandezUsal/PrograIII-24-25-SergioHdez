@@ -1,19 +1,21 @@
 
 
-import java.util.List;
 
-import modell.Factura;
+
+import controller.FacturaCrontroller;
+
 import modell.FacturaModel;
+import view.FacturaView;
 
 public class App {
     public static void main(String[] args) throws Exception {
         FacturaModel model = new FacturaModel();
+        FacturaView view=new FacturaView();
+        FacturaCrontroller crontroller=new FacturaCrontroller(view, model);
+        
         int facturasCorrectas= model.cargarFacturasDesdeArchivo();
         System.out.println("se han cargado " +  facturasCorrectas  + " facturas");
 
-        List<Factura> facturas = model.getFacturas();
-        for (Factura factura: facturas){
-            System.out.println(factura.getFacturasAsDelimitedString(";"));
-        }
+        crontroller.iniciar();
     }
 }
