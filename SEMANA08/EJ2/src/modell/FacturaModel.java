@@ -1,6 +1,7 @@
 package modell;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -70,6 +71,19 @@ public class FacturaModel {
         }
         return listado;
         
+
+    }
+
+    public String exportarCsv(String archivo){
+        try(PrintWriter writer=new PrintWriter(archivo)){
+            writer.println("Concepto,Fecha,Descuento,Importe,NIF,NombreCliente,Direccion,IVA");
+            for (Factura factura : facturas) {
+                writer.println(factura.toCSVString());
+            }
+            return "ÉXITO";
+        }catch(IOException e){
+            return "ERROR";
+        }
 
     }
 

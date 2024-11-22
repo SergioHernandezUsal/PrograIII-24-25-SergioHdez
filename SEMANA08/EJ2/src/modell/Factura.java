@@ -56,7 +56,10 @@ public class Factura {
     public String getFacturasAsDelimitedString(String delimitador){
         return String.format(Locale.ENGLISH, "%s" + delimitador + " %s " + delimitador + " %f " + delimitador + " %f " + delimitador + " %s " + delimitador +  " %s " + delimitador + " %s " + delimitador + " %f ", concepto, fecha, descuento, importe, nif, nombreCliente, direccion, iva);
     }
-
+    public String toCSVString() {
+        return String.format(Locale.ENGLISH, "%s,%s,%.2f,%.2f,%s,%s,%s,%.2f",
+            concepto, fecha, descuento, importe, nif, nombreCliente, direccion, iva);
+    }
 
     public String getConcepto() {
         return concepto;

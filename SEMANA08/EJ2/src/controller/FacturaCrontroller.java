@@ -31,6 +31,10 @@ public class FacturaCrontroller {
         return modelo.listadoFacturas();
     }
 
+    public String exportarCsv(String archivo){
+        return modelo.exportarCsv(archivo);
+    }
+
 
     
 }

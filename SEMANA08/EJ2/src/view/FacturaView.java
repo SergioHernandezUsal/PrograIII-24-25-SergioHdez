@@ -17,6 +17,7 @@ public class FacturaView {
             System.out.println("\n--- Menú ---");
             System.out.println("1. Mostrar clientes con facturas superiores a un valor mínimo");
             System.out.println("2. Mostrar listado total de facturas");
+            System.out.println("3. Exportar a csv");
             System.out.println("0. Salir");
            
             opcion= readInt("Seleccione una opción: ");
@@ -27,6 +28,10 @@ public class FacturaView {
                     break;
                 case 2:
                     listadoFacturas();
+                    break;
+
+                case 3:
+                exportarCsv();
                     break;
                 
                 default:
@@ -55,6 +60,12 @@ public class FacturaView {
         
     
 
+    }
+
+    private void exportarCsv(){
+        String archivo=readString("Introduzca el nombre del archivo CSV: ");
+        System.out.println(controlador.exportarCsv(archivo));
+        
     }
 
     public void setControlador(FacturaCrontroller controlador) {
