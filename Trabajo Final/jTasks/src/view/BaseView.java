@@ -1,6 +1,7 @@
 package view;
 
 import controller.Controller;
+import model.RepositoryException;
 
 public abstract class BaseView {
     protected Controller controller;
@@ -11,7 +12,7 @@ public abstract class BaseView {
     }
 
     
-    public abstract void init(); 
+    public abstract void init() throws RepositoryException; 
     public abstract void showMessage(String mensaje); 
     public abstract void showErrorMessage(String error); 
     public abstract void end(); 

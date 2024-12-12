@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\SERGI\\Downloads\\gson-2.10.1.jar",
+        "c:\\Users\\SERGI\\Downloads\\notion-sdk-jvm-core-1.11.1.jar"
+    ]
+}
